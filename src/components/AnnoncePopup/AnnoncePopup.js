@@ -28,11 +28,11 @@ const AnnoncePopup = ({ modal, info }) => {
                 <Text style={styles.job}>{info.job}</Text>
                 {!fav ? (
                     <TouchableOpacity style={styles.button} onPress={Fav}>
-                        <Text style={styles.buttonText}>Ajouter au favoris</Text>
+                        <Text style={styles.buttonText}>Demmander ce dons</Text>
                     </TouchableOpacity>
                 ) : (
                     <TouchableOpacity style={styles.buttonActive} onPress={Fav}>
-                        <Text style={styles.buttonActiveText}>Supprimer de favoris</Text>
+                        <Text style={styles.buttonActiveText}>Supprimmer ce dons</Text>
                     </TouchableOpacity>
                 )}
             </View>

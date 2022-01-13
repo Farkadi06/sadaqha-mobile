@@ -1,6 +1,7 @@
 import React from 'react'
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
 import { FAB } from 'react-native-paper';
+import DonsInfo from '../../../components/DonsInfo/Dons-info';
 import { theme } from '../../../themes';
 
 const DonsScreen = () => {
@@ -14,7 +15,12 @@ const DonsScreen = () => {
                 style={styles.Recherche}/>
         </View>
         <ScrollView contentContainerStyle={{paddingTop:15}}>
-               
+               <DonsInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' DonsName='Voiture à donner' DonsVille='Casablanca' DonsCategorie='Véhicules'/>
+               <DonsInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' DonsName='Voiture à donner' DonsVille='Casablanca' DonsCategorie='Véhicules'/>
+               <DonsInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' DonsName='Voiture à donner' DonsVille='Casablanca' DonsCategorie='Véhicules'/>
+               <DonsInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' DonsName='Voiture à donner' DonsVille='Casablanca' DonsCategorie='Véhicules'/>
+               <DonsInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' DonsName='Voiture à donner' DonsVille='Casablanca' DonsCategorie='Véhicules'/>
+               <DonsInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' DonsName='Voiture à donner' DonsVille='Casablanca' DonsCategorie='Véhicules'/>
         </ScrollView>
         <FAB
                 style={styles.fab}

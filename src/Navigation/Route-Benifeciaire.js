@@ -48,8 +48,7 @@ const RouteBenifeciaire = () => {
       const Tab = createBottomTabNavigator();
 
     return (
-        <Tab.Navigator
-                screenOptions={createScreenOptions}>
+        <Tab.Navigator screenOptions={createScreenOptions} name="BenifeciareStack">
             <Tab.Screen name="Annonces" component={home} options={{headerShown: true, lazy: () => <Header/> }}/>
             <Tab.Screen name="Map" component={MapScreen}  options={{headerShown: true}}/>
             {/* <Tab.Screen name="Settings" component={SettingsScreen} /> */}
