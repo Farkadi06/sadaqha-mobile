@@ -8,11 +8,8 @@ const home = () => {
         <View style={styles.container}>
             <View>
                 <Text style={styles.Title}>Liste des annonces</Text>
-                <TextInput
-                    placeholder='Chercher'
-                    style={styles.Recherche}/>
-            </View>
-                <ScrollView contentContainerStyle={{paddingTop:15}}>
+            </View >
+                <ScrollView contentContainerStyle={{paddingTop:15}} style={styles.ScrollView}>
                     <AnnonceInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' AnnonceName='Voiture à donner' AnnonceVille='Casablanca' AnnonceCategorie='Véhicules'/>
                     <AnnonceInfo uri='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1NQHgQlYy3jKuXLOm7HL9184wtvXxrgYoTZEXNp4-iW6Fl2zrUD08sC4jXnUqee6mwsc&usqp=CAU' AnnonceName='Vetements à donner' AnnonceVille='Agadir' AnnonceCategorie='Vetements'/>
                     <AnnonceInfo uri='https://mercileonie.b-cdn.net/16368-large_default/machinalaver-micro-souris-maileg.jpg' AnnonceName='Une machine à lavé neuf' AnnonceVille='Marakech' AnnonceCategorie='Electroniques'/>

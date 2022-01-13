@@ -4,7 +4,7 @@ import styles from './style'
 
 const AnnonceInfo = ({uri, AnnonceName, AnnonceVille, AnnonceCategorie}) => {
     return (
-        <View  style={{ overflow: 'hidden', paddingBottom: 5 }}>
+        <View  style={{ overflow: 'hidden', paddingBottom: 5,}}>
             <View style={styles.container}>
                 <Image
                     style={styles.picture}

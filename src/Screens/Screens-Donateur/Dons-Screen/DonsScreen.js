@@ -10,9 +10,6 @@ const DonsScreen = () => {
            
         <View>
             <Text style={styles.Title}>Liste des dons</Text>
-            <TextInput
-                placeholder='Chercher'
-                style={styles.Recherche}/>
         </View>
         <ScrollView contentContainerStyle={{paddingTop:15}}>
                <DonsInfo uri='https://content.avito.ma/mob_320/10/10049038656.jpg' DonsName='Voiture à donner' DonsVille='Casablanca' DonsCategorie='Véhicules'/>

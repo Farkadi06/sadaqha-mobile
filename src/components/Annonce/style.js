@@ -5,11 +5,13 @@ export default StyleSheet.create({
     container: {
         height: 77,
         margin:10,
+        padding:8,
+        borderRadius:8,
         display: 'flex',
         flexDirection: 'row',
-        borderBottomWidth: 1,
+        elevation:8,
+        backgroundColor:'#F1F1F1',
         paddingBottom: 10,
-        borderBottomColor: '#F1F1F1',
     },
    
     picture:{

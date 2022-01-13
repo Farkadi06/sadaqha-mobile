@@ -10,6 +10,8 @@ import SwitchScreen from './src/Screens/SwitchScreen';
 import NavigationRoute from './src/Navigation/NavigationRoute';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+import Header from './src/shared/Header';
+import { theme } from './src/themes';
 
 
 export default function App() {
@@ -22,10 +24,10 @@ export default function App() {
 // {/* {isAuthenticated ? <RouteBenifeciaire /> : <AccountsNavigation />} */}
 // {!isDonateur ? <RouteBenifeciaire /> : <RouteDonateur/>}
     <NavigationContainer style={styles.container}>
-        <Tab.Navigator  screenOptions={{ headerShown: false }}>
+        <Tab.Navigator  >
           <Tab.Screen name="SwitchScreen" component={SwitchScreen} />
-          <Tab.Screen name="Donateur"component={RouteDonateur} />
-          <Tab.Screen name="Benifiaire"component={RouteBenifeciaire} />
+          <Tab.Screen name="Donateur"component={RouteDonateur} options={{ headerTitle: ({ route }) => <Header mycolor={theme.colors.bg } title= 'Donateur' />}} />
+          <Tab.Screen name="Benifiaire"component={RouteBenifeciaire}  options={{ headerTitle: ({ route }) => <Header mycolor={theme.colors.bg} title= 'Benifiaire' />}} />
         </Tab.Navigator>
     </NavigationContainer>
   );

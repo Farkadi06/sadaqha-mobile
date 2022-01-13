@@ -23,5 +23,6 @@ export default  StyleSheet.create({
         borderRadius: 30,
         marginRight: 20,
         marginLeft: 20,
-    }
+    },
+    
 })

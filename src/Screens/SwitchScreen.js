@@ -2,10 +2,12 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import NavigationRoute from '../Navigation/NavigationRoute';
+import Header from '../shared/Header';
 import { theme } from '../themes'
 
 const SwitchScreen = () => {
     const navigation = useNavigation();
+    
     return (
             <View>
                 <View style={styles.header}>
@@ -18,8 +20,9 @@ const SwitchScreen = () => {
 
                     <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Benifiaire')} >
                             <Text style={styles.buttonText}>Bénificiare</Text>
-                    </TouchableOpacity>
-                </View>  
+                    </TouchableOpacity> 
+                </View>
+               
             </View>
     )
 }

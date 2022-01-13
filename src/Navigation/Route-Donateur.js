@@ -7,7 +7,7 @@ const RouteDonateur = () => {
     const Stack = createStackNavigator();
 
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="DonScreen" component={DonsScreen} />
         </Stack.Navigator>
     )

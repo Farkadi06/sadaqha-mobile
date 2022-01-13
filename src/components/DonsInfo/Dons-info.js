@@ -1,6 +1,8 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { theme } from '../../themes';
+import { Ionicons } from "@expo/vector-icons";
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 const DonsInfo = ({uri, DonsName, DonsVille, DonsCategorie}) => {
     return (
@@ -16,7 +18,17 @@ const DonsInfo = ({uri, DonsName, DonsVille, DonsCategorie}) => {
                     <Text style={styles.LaureatName}>{DonsName}</Text>
                     <Text style={styles.DonsVille}>{DonsVille}</Text>
                 </View>
-                <Text style={styles.DonsVille}>{DonsCategorie}</Text>
+                <View  style={styles.DonsCrud}>
+                    <Text  style={styles.DonsCategorie}>{DonsCategorie}</Text>
+                    <View style={styles.iconsContainer}>
+                        <TouchableOpacity style={styles.iconsStyle } onPress={() => console.log('Delete')} >
+                            <Ionicons name='close'/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.iconsStyle} onPress={() => console.log('Update')} >
+                            <Ionicons name='refresh'/>
+                        </TouchableOpacity>   
+                    </View>
+                </View>
             </View>
     </View>
     )
@@ -28,11 +40,13 @@ const styles = StyleSheet.create({
     container: {
         height: 77,
         margin:10,
+        padding:8,
+        borderRadius:8,
         display: 'flex',
         flexDirection: 'row',
-        borderBottomWidth: 1,
+        elevation:8,
+        backgroundColor:'#F1F1F1',
         paddingBottom: 10,
-        borderBottomColor: '#F1F1F1',
     },
    
     picture:{
@@ -50,10 +64,30 @@ const styles = StyleSheet.create({
     DonsVille:{
         color: theme.colors.text.secondary
     },
-    DonsVille: {
+    DonsCrud: {
+        marginLeft: 'auto',
+        
+    },
+    DonsCategorie: {
         flex:1,
         marginRight:5,
         textAlign: 'right'
-
+    },
+    iconsContainer:{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-evenly'
+    },
+    iconsStyle:{
+        width: 30,
+        height: 30,
+        margin:5,
+        borderRadius: 50,
+        backgroundColor: theme.colors.ui.tertiary,
+        shadowColor: 'black',
+        elevation: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+        
     }
 })
