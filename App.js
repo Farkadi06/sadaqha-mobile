@@ -12,7 +12,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Header from './src/shared/Header';
 import { theme } from './src/themes';
-
+import NewDons from './src/Screens/Screens-Donateur/crud-Dons/NewDons'
+import SignInScreen from './src/Screens/Screens-Auth/SignInScreen/SignIn'
+import SignUpScreen from './src/Screens/Screens-Auth/SignupScreen/SignUp'
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -23,12 +25,22 @@ export default function App() {
 
 // {/* {isAuthenticated ? <RouteBenifeciaire /> : <AccountsNavigation />} */}
 // {!isDonateur ? <RouteBenifeciaire /> : <RouteDonateur/>}
+
     <NavigationContainer style={styles.container}>
+      {
+        !isAuthenticated ? 
         <Tab.Navigator  >
           <Tab.Screen name="SwitchScreen" component={SwitchScreen} />
           <Tab.Screen name="Donateur"component={RouteDonateur} options={{ headerTitle: ({ route }) => <Header mycolor={theme.colors.bg } title= 'Donateur' />}} />
           <Tab.Screen name="Benifiaire"component={RouteBenifeciaire}  options={{ headerTitle: ({ route }) => <Header mycolor={theme.colors.bg} title= 'Benifiaire' />}} />
-        </Tab.Navigator>
+          <Tab.Screen name="NewDons" component={NewDons} options={{ headerTitle: ({ route }) => <Header mycolor={theme.colors.bg} title= 'Benifiaire' />}} />
+        </Tab.Navigator> : 
+          <Tab.Navigator  >
+            <Tab.Screen name="SignIn" component={SignInScreen}/>
+            <Tab.Screen name="SignUp" component={SignUpScreen}/>
+          </Tab.Navigator>
+      }
+
     </NavigationContainer>
   );
 }
